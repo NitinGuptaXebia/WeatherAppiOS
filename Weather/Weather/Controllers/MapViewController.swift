@@ -33,28 +33,35 @@ class MapViewController: MasterViewController {
     
     @objc private func addAnnotationOnLongPress(gesture: UILongPressGestureRecognizer) {
         if gesture.state == .ended {
-            showActivityIndicator(superView: self.view)
+            showActivityIndicator(superView: (self.navigationController?.view)!)
             let point = gesture.location(in: self.mapView)
             let coordinate = self.mapView.convert(point, toCoordinateFrom: self.mapView)
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = coordinate
+            let pointAnnotation = MKPointAnnotation()
+            pointAnnotation.coordinate = coordinate
             
             let loc = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
             CLGeocoder().reverseGeocodeLocation(loc, completionHandler: { (placemarks, error) in
-                let placemark = placemarks?.first
-                annotation.title = placemark?.administrativeArea
-                annotation.subtitle = placemark?.country
-                self.mapView.addAnnotation(annotation)
-                self.hideActivityIndicator(superView: self.view)
+                if error != nil {
+                    Utils.showAlert(title: "ERROR", message: (error?.localizedDescription)!, actions: nil)
+                } else {
+                    let placemark = placemarks?.first
+                    let annotation = Annotation(withCoordinate: coordinate)
+                    annotation.title = placemark?.administrativeArea
+                    annotation.subtitle = placemark?.country
+                    self.hideActivityIndicator(superView: self.view)
+                    
+                    let cancleAction = UIAlertAction.init(title: "Cancle", style: .cancel, handler: { (action) in
+                        self.mapView.removeAnnotation(pointAnnotation)
+                    })
+                    let confirmAction = UIAlertAction.init(title: "Confirm", style: .default, handler: { (action) in
+                        self.mapView.addAnnotation(pointAnnotation)
+                        DataHub.sharedInstance.addAnnotation(annotation: annotation)
+                    })
+                    let title = "Would you like to bookmark location?"
+                    let message = annotation.title! + " " + annotation.subtitle!
+                    Utils.showAlert(title: title, message: message, actions: [cancleAction, confirmAction])
+                }
             })
         }
     }
-    
-    private func placeAnnotationToMap(withCoordinate coordinate: CLLocationCoordinate2D) -> Void {
-        var annotation: Annotation? = Annotation(withCoordinate: coordinate)
-        mapView.addAnnotation(annotation!)
-        mapView.setCenter(coordinate, animated: true)
-        annotation = nil
-    }
-
 }
