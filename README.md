@@ -15,28 +15,35 @@ Go to the project directory **Project Directory**
 The project can be run using Xcode 8.3 and built/tested using the standard Xcode build (⌘B) and test (⌘U) commands.
 
 ## Features
-* `Swift Programming Language - fully upgraded to version 3.1`
+* `Swift Programming Language - version 3.1`
 * `Design driven development`  
 * `Custom UIView`
 * `UICollectionViewController`
 * MVC - Reactively update `ViewController` UI from `ViewModel`
 * `Protocol-Oriented Programming `
-* `Core Location`
+* `Apple Map Kit`
 * `UIStackView`
 #
 ● Home screen:
 - Showing a list of locations that the user has bookmarked previously.
-- Show a way to remove locations from the list
-- Add locations by placing a pin on map.
+- Show a way to remove locations from the list - Swipe left.
+- Add locations by placing a pin on map- Longpress Gesture.
 
 ● City screen: once the user clicks on a bookmarked city this screen will appear. On this screen the user should be able to see:
 - Today’s forecast, including: temperature, humidity, rain chances and wind information
+- 5 Days forecast, including: temperature, humidity, rain chances and wind information
+- On the home screen, implemented search capabilities for a list of known or bookmarked locations.
 
-● Help screen: The help screen should be done using a webview, and contain information of how to use the app, gestures available if any, etc.
+● Help screen: The help screen is done using a webview, and contain information of how to use the app, gestures available if any, etc.
 
 ● Settings page: where the user can select some preferences like: unit system
-(metric/imperial), any other user setting you consider relevant, e.g. reset cities
-bookmarked.
+(metric/imperial),reset cities bookmarked.
+
+● The UI is responsive supports - landscape and portrait orientations, and tablet resolutions.
+
+● Compatible with iOS 8+ or above.
+
+● Unit tests added with coverage of 80%.
 
 ## Further Improvements
 
