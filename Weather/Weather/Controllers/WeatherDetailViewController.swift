@@ -10,15 +10,31 @@ import UIKit
 
 class WeatherDetailViewController: MasterViewController {
 
+    var annotation: Annotation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        getWeatherData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    func getWeatherData() -> Void {
+        var unit = UserDefaults.standard.object(forKey: UserDefaultKeys.TemperaturUnitKey)
+        unit = unit == nil ? "Metric" : unit
+        fetchWeather(forLatitude: (annotation?.coordinate.latitude)!, Longitude: (annotation?.coordinate.longitude)!, TempratureUnit: unit as! String)
+    }
+    
+    func fetchWeather(forLatitude lat: Double, Longitude long: Double, TempratureUnit unit: String) {
+        let weatherAPI = WeatherAPI()
+        weatherAPI.callback = { respose in
+            // TODO
+        }
+        weatherAPI.getWeather(forLatitude: lat, Longitude: long, TempratureUnit: unit)
+    }
+
 
 }

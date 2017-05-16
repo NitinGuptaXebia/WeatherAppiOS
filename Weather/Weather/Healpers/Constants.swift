@@ -57,3 +57,9 @@ struct AppColor {
     static let PrimaryColor = UIColor(colorLiteralRed: 0.0/255.0, green: 102/255.0, blue: 161/255.0, alpha: 1.0)
     static let SecondaryColor = UIColor(colorLiteralRed: 181.0/255.0, green: 84/255.0, blue: 53/255.0, alpha: 1.0)
 }
+
+struct APIConfigurations {
+    static let baseURLString = "http://api.openweathermap.org/data/2.5"
+    static let timeOutInterval = 180
+    static let AppId = "09010431c87889b1be4d9aa25b88f604"
+}

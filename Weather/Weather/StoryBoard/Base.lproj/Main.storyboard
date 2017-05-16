@@ -79,7 +79,7 @@
                                     <segue destination="BAF-aJ-tn3" kind="show" id="7gA-Qu-GwI"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="add" id="QDW-5U-HiM">
+                            <barButtonItem image="Add" id="QDW-5U-HiM">
                                 <connections>
                                     <segue destination="gsS-Vg-2j1" kind="show" id="p20-NR-ms2"/>
                                 </connections>
@@ -434,6 +434,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="25" height="25"/>
         <image name="Help" width="25" height="25"/>
         <image name="LoginBg" width="320" height="480"/>
         <image name="Ok" width="30" height="30"/>

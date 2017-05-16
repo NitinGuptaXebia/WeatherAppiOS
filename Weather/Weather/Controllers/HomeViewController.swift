@@ -52,6 +52,7 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
         let detailVC = storyBoard.instantiateViewController(withIdentifier: "WeatherDetailViewController") as! WeatherDetailViewController
+        detailVC.annotation = DataHub.sharedInstance.annotationsArray?[indexPath.row]
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
     

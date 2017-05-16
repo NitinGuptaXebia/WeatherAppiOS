@@ -31,7 +31,7 @@ class Utils {
             return
         }
         navigationController!.navigationBar.barTintColor = AppColor.PrimaryColor
-        navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 16.0)]
+        navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16.0)]
         navigationController!.navigationBar.isTranslucent = false
         navigationController!.navigationBar.tintColor = UIColor.white
         navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -49,9 +49,9 @@ class Utils {
     ///
     /// - Parameter data: Url Response Data
     /// - Returns: return value [[String:Any]]
-    internal class func serializeJSONData(data: Data) -> [[String:Any]]? {
+    internal class func serializeJSONData(data: Data) -> [String:Any]? {
         do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data, options:[]) as! [[String:Any]]
+            let jsonResult = try JSONSerialization.jsonObject(with: data, options:[]) as! [String:Any]
             return jsonResult
         } catch {
             print("ERROR: Unable to Serialize Data to Dict")
