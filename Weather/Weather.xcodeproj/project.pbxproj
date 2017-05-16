@@ -22,6 +22,7 @@
 		F6CED0661ECAAFF800B8E0D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0651ECAAFF800B8E0D6 /* Utils.swift */; };
 		F6CED0681ECAB18D00B8E0D6 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0671ECAB18D00B8E0D6 /* Annotation.swift */; };
 		F6D51B231ECB0521006BF869 /* Help.html in Resources */ = {isa = PBXBuildFile; fileRef = F6D51B221ECB0521006BF869 /* Help.html */; };
+		F6D51B251ECB0854006BF869 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D51B241ECB0854006BF869 /* LoginViewController.swift */; };
 		F6F951721ECAD80700BD7B95 /* DataHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F951711ECAD80700BD7B95 /* DataHub.swift */; };
 		F6F951741ECAE31F00BD7B95 /* TemperaturePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F951731ECAE31F00BD7B95 /* TemperaturePickerCell.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		F6CED0651ECAAFF800B8E0D6 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F6CED0671ECAB18D00B8E0D6 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		F6D51B221ECB0521006BF869 /* Help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Help.html; sourceTree = "<group>"; };
+		F6D51B241ECB0854006BF869 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F6F951711ECAD80700BD7B95 /* DataHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHub.swift; sourceTree = "<group>"; };
 		F6F951731ECAE31F00BD7B95 /* TemperaturePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturePickerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 				F6CED05B1ECAAF9700B8E0D6 /* MapViewController.swift */,
 				F6CED05D1ECAAFA700B8E0D6 /* HelpViewController.swift */,
 				F6CED05F1ECAAFB600B8E0D6 /* SettingsViewController.swift */,
+				F6D51B241ECB0854006BF869 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				F6CED0601ECAAFB600B8E0D6 /* SettingsViewController.swift in Sources */,
 				F6F951721ECAD80700BD7B95 /* DataHub.swift in Sources */,
 				F6F951741ECAE31F00BD7B95 /* TemperaturePickerCell.swift in Sources */,
+				F6D51B251ECB0854006BF869 /* LoginViewController.swift in Sources */,
 				F6CED0641ECAAFDE00B8E0D6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

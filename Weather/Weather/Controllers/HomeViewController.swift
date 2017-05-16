@@ -17,6 +17,7 @@ class HomeViewController: MasterViewController {
         super.viewDidLoad()
         Utils.customizeNavigation(navigationController: self.navigationController)
         setupTableView()
+        manageLoginView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +34,16 @@ class HomeViewController: MasterViewController {
     private func setupTableView() -> Void {
         citiesTableView.separatorColor = AppColor.PrimaryColor
         citiesTableView.tableFooterView = UIView(frame: CGRect.zero)
+    }
+    
+    private func manageLoginView() {
+        Utils.performWithDelay(seconds: 0.0) {
+            if DataHub.sharedInstance.isLoggedIn == false {
+                let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+                let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                self.present(loginVC, animated: true, completion: nil)
+            }
+        }
     }
 }
 
