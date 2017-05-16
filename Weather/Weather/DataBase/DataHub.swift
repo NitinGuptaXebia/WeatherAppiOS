@@ -21,10 +21,12 @@ class DataHub {
 
     func addAnnotation(annotation: Annotation) -> Void {
         annotationsArray?.append(annotation)
+        saveData()
     }
     
     func removeAnnotation(index: Int) -> Void {
         annotationsArray?.remove(at: index)
+        saveData()
     }
 
     func saveData() -> Void {
@@ -39,8 +41,7 @@ class DataHub {
         }
         
         let path = dataFilePath()
-        let status = finalArray.write(toFile: path, atomically: true)
-        print("status : \(status)")
+        let _ = finalArray.write(toFile: path, atomically: true)
     }
     
     //Mark: Private Functions
@@ -49,7 +50,6 @@ class DataHub {
     }
     
     private func initialisingDataHub() {
-        print("initialisingDataHub")
         annotationsArray = Array()
         let path = dataFilePath()
         if let savedArray = NSArray(contentsOfFile: path) {

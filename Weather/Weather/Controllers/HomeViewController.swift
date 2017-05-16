@@ -44,7 +44,14 @@ extension HomeViewController: UITableViewDelegate {
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        DataHub.sharedInstance.removeAnnotation(index: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .left)
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {

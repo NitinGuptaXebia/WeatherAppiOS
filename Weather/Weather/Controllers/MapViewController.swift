@@ -18,6 +18,7 @@ class MapViewController: MasterViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLongPressGesture()
+        self.title = "Pin Your Location"
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +28,7 @@ class MapViewController: MasterViewController {
     //MARK: Private Functions
     private func setLongPressGesture() -> Void {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationOnLongPress(gesture:)))
-        longPressGesture.minimumPressDuration = 1.0
+        longPressGesture.minimumPressDuration = 0.5
         self.mapView.addGestureRecognizer(longPressGesture)
     }
     
@@ -59,8 +60,8 @@ class MapViewController: MasterViewController {
                         self.mapView.addAnnotation(pointAnnotation)
                         DataHub.sharedInstance.addAnnotation(annotation: annotation)
                     })
-                    let title = "Would you like to bookmark location?"
-                    let message = annotation.title! + " " + annotation.subtitle!
+                    let message = "Would you like to bookmark this location?"
+                    let title = annotation.title! + ", " + annotation.subtitle!
                     Utils.showAlert(title: title, message: message, actions: [cancleAction, confirmAction])
                 }
             })

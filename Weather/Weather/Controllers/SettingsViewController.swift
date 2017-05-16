@@ -15,6 +15,7 @@ class SettingsViewController: MasterViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Utils.customizeNavigation(navigationController: self.navigationController)
+        self.title = "Settings"
     }
 
     override func didReceiveMemoryWarning() {
