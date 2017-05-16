@@ -14,6 +14,12 @@ class WeatherAPI: APIBase {
         self.methodName = "/weather"
     }
     
+    /// Fecthing Weather API
+    ///
+    /// - Parameters:
+    ///   - lat: Latitude
+    ///   - long: Longitude
+    ///   - unit: TempratureUnit
     func getWeather(forLatitude lat: Double, Longitude long: Double, TempratureUnit unit: String) -> Void {
         let urlPath = APIConfigurations.baseURLString + methodName!
         let paramString = "?lat=\(lat)&lon=\(long)&appid=\(APIConfigurations.AppId)&units=\(unit)"

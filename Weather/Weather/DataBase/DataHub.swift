@@ -20,11 +20,17 @@ class DataHub {
         return Singleton.instance
     }
 
+    /// Adding Annotation to DB
+    ///
+    /// - Parameter annotation: annotation object
     func addAnnotation(annotation: Annotation) -> Void {
         annotationsArray?.append(annotation)
         saveData()
     }
     
+    /// Removing Annotation to DB
+    ///
+    /// - Parameter annotation: annotation object
     func removeAnnotation(index: Int) -> Void {
         guard index < (annotationsArray?.count)! else {
             return
@@ -33,6 +39,7 @@ class DataHub {
         saveData()
     }
 
+    /// Saving Annotation to DB
     func saveData() -> Void {
         guard annotationsArray != nil && (annotationsArray?.count)! > 0 else {
             return
@@ -53,6 +60,7 @@ class DataHub {
         initialisingDataHub()
     }
     
+    /// Initialising DataHub Annotation to DB
     private func initialisingDataHub() {
         annotationsArray = Array()
         let path = dataFilePath()
@@ -65,6 +73,9 @@ class DataHub {
     }
     
     
+    /// Document Directory Path for Data PLIST
+    ///
+    /// - Returns: path String
     private func dataFilePath() -> String {
         return Utils.documentDirectoryPath() + "/data.plist"
     }

@@ -18,6 +18,9 @@ class SettingsViewController: MasterViewController {
         self.title = "Settings"
     }
 
+    /// Cancle Bar Button Item Action
+    ///
+    /// - Parameter sender: sender Bar Button Item
     @IBAction func cancleAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -55,6 +58,9 @@ extension SettingsViewController:UICollectionViewDelegate{
         collectionView.reloadData()
     }
     
+    /// Save Selected Preferences
+    ///
+    /// - Parameter indexPath: indexPath Value
     private func saveSelectedPreferences(indexPath: IndexPath) {
         let key = TempratureUnitType.getTempratureUnitKey(forType: TempratureUnitType(rawValue: indexPath.row)!)
         UserDefaults.standard.set(key, forKey: UserDefaultKeys.TemperaturUnitKey)

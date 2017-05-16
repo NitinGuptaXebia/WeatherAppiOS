@@ -27,6 +27,9 @@ class Request: NSObject {
         
     }
 
+    /// Execute Request Function
+    ///
+    /// - Parameter completion: completion Block
     func execute(completion: @escaping (AnyObject?,NSError?) -> Void) {
         let myUrlString = self.urlString
         let requestURL : URL! = URL(string:myUrlString!)

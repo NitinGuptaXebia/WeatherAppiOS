@@ -35,6 +35,7 @@ class HomeViewController: MasterViewController {
         citiesTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
+    /// Manage the Login screen in case user is not logged in
     private func manageLoginView() {
         Utils.performWithDelay(seconds: 0.0) {
             if DataHub.sharedInstance.isLoggedIn == false {

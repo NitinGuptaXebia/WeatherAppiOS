@@ -22,12 +22,16 @@ class MapViewController: MasterViewController {
     }
 
     //MARK: Private Functions
+    /// Long Press Gesture for Placing pin on MKMap
     private func setLongPressGesture() -> Void {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationOnLongPress(gesture:)))
         longPressGesture.minimumPressDuration = 0.5
         self.mapView.addGestureRecognizer(longPressGesture)
     }
     
+    /// Long Press Gesture Action
+    ///
+    /// - Parameter gesture: gesture instance
     @objc private func addAnnotationOnLongPress(gesture: UILongPressGestureRecognizer) {
         if gesture.state == .ended {
             showActivityIndicator(superView: (self.navigationController?.view)!)

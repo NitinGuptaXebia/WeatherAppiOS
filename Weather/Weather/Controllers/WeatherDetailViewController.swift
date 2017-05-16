@@ -17,6 +17,7 @@ class WeatherDetailViewController: MasterViewController {
         getWeatherData()
     }
 
+    /// Getting Weather Data
     func getWeatherData() -> Void {
         var unit = UserDefaults.standard.object(forKey: UserDefaultKeys.TemperaturUnitKey)
         unit = unit == nil ? "Metric" : unit
@@ -26,6 +27,12 @@ class WeatherDetailViewController: MasterViewController {
         fetchWeather(forLatitude: (annotation?.coordinate.latitude)!, Longitude: (annotation?.coordinate.longitude)!, TempratureUnit: unit as! String)
     }
     
+    /// Fecthing Weather API
+    ///
+    /// - Parameters:
+    ///   - lat: Latitude
+    ///   - long: Longitude
+    ///   - unit: TempratureUnit
     func fetchWeather(forLatitude lat: Double, Longitude long: Double, TempratureUnit unit: String) {
         let weatherAPI = WeatherAPI()
         weatherAPI.callback = { respose in
