@@ -27,6 +27,7 @@ class WeatherDetailViewController: MasterViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = (annotation?.title!)! + " Weather Report"
         showActivityIndicator(superView: (self.navigationController?.view)!)
         getWeatherData()
     }
