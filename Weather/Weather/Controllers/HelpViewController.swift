@@ -16,11 +16,11 @@ class HelpViewController: MasterViewController {
         self.title = "Help"
         showActivityIndicator(superView: self.view)
         let htmlFile = Bundle.main.path(forResource: "Help", ofType: "html")
+        let url = URL.init(fileURLWithPath: htmlFile!)
         let html = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
-        webVieW.loadHTMLString(html!, baseURL: nil)
+        webVieW.loadHTMLString(html!, baseURL: url)
         webVieW.delegate = self
-
-    }    
+    }
 }
 
 extension HelpViewController : UIWebViewDelegate {
