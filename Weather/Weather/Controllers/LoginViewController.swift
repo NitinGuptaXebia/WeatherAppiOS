@@ -45,7 +45,7 @@ class LoginViewController: MasterViewController {
         view.resignFirstResponder()
         guard let username = userNameTF.text,
             let password = passwordTF.text else { return  }
-        if username.lowercased() == "backbase" && password.lowercased() == "nitingupta"{
+        if username.lowercased() == LoginConfiguration.UserName && password.lowercased() == LoginConfiguration.Password{
             loginButton.isEnabled = false
             DataHub.sharedInstance.isLoggedIn = true
             dismiss(animated: true, completion: nil)

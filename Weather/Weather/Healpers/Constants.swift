@@ -63,3 +63,9 @@ struct APIConfigurations {
     static let timeOutInterval = 180
     static let AppId = "09010431c87889b1be4d9aa25b88f604"
 }
+
+struct LoginConfiguration {
+    static let isLoginEanbled = true
+    static let UserName = "nitin@backbase.com"
+    static let Password = "xebia@123"
+}

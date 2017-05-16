@@ -11,7 +11,7 @@ import Foundation
 class DataHub {
     
     var annotationsArray : Array<Annotation>?
-    var isLoggedIn = false
+    var isLoggedIn = LoginConfiguration.isLoginEanbled == true ? false : true
 
     internal class var sharedInstance: DataHub {
         struct Singleton {
