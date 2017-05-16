@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+//Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit
+enum TempratureUnitType : Int {
+    case Kelvin = 0
+    case Celsius = 1
+    case Fahrenheit = 2
+}

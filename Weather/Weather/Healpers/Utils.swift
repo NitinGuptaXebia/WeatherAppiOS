@@ -17,4 +17,14 @@ class Utils {
         }
     }
     
+    internal class func getTempratureUnitKey(forType type: TempratureUnitType) -> String {
+        switch type {
+        case .Celsius:
+            return "Metric"
+        case .Fahrenheit:
+            return "Imperial"
+        case .Kelvin:
+            return "Default"
+        }
+    }
 }
