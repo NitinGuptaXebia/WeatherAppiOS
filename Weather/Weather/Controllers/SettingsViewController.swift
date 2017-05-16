@@ -15,13 +15,12 @@ class SettingsViewController: MasterViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Utils.customizeNavigation(navigationController: self.navigationController)
+        self.title = "Settings"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    /// Cancle Bar Button Item Action
+    ///
+    /// - Parameter sender: sender Bar Button Item
     @IBAction func cancleAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -59,6 +58,9 @@ extension SettingsViewController:UICollectionViewDelegate{
         collectionView.reloadData()
     }
     
+    /// Save Selected Preferences
+    ///
+    /// - Parameter indexPath: indexPath Value
     private func saveSelectedPreferences(indexPath: IndexPath) {
         let key = TempratureUnitType.getTempratureUnitKey(forType: TempratureUnitType(rawValue: indexPath.row)!)
         UserDefaults.standard.set(key, forKey: UserDefaultKeys.TemperaturUnitKey)

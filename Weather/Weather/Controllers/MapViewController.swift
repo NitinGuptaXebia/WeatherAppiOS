@@ -18,19 +18,20 @@ class MapViewController: MasterViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLongPressGesture()
+        self.title = "Pin Your Location"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     //MARK: Private Functions
+    /// Long Press Gesture for Placing pin on MKMap
     private func setLongPressGesture() -> Void {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationOnLongPress(gesture:)))
-        longPressGesture.minimumPressDuration = 1.0
+        longPressGesture.minimumPressDuration = 0.5
         self.mapView.addGestureRecognizer(longPressGesture)
     }
     
+    /// Long Press Gesture Action
+    ///
+    /// - Parameter gesture: gesture instance
     @objc private func addAnnotationOnLongPress(gesture: UILongPressGestureRecognizer) {
         if gesture.state == .ended {
             showActivityIndicator(superView: (self.navigationController?.view)!)
@@ -45,21 +46,27 @@ class MapViewController: MasterViewController {
                     Utils.showAlert(title: "ERROR", message: (error?.localizedDescription)!, actions: nil)
                 } else {
                     let placemark = placemarks?.first
-                    let annotation = Annotation(withCoordinate: coordinate)
-                    annotation.title = placemark?.administrativeArea
-                    annotation.subtitle = placemark?.country
-                    self.hideActivityIndicator(superView: self.view)
-                    
-                    let cancleAction = UIAlertAction.init(title: "Cancle", style: .cancel, handler: { (action) in
-                        self.mapView.removeAnnotation(pointAnnotation)
-                    })
-                    let confirmAction = UIAlertAction.init(title: "Confirm", style: .default, handler: { (action) in
-                        self.mapView.addAnnotation(pointAnnotation)
-                        DataHub.sharedInstance.addAnnotation(annotation: annotation)
-                    })
-                    let title = "Would you like to bookmark location?"
-                    let message = annotation.title! + " " + annotation.subtitle!
-                    Utils.showAlert(title: title, message: message, actions: [cancleAction, confirmAction])
+                    if placemark?.administrativeArea != nil && placemark?.country != nil {
+                        let annotation = Annotation(withCoordinate: coordinate)
+                        annotation.title = placemark?.administrativeArea
+                        annotation.subtitle = placemark?.country
+                        
+                        self.hideActivityIndicator(superView: self.view)
+                        
+                        let cancleAction = UIAlertAction.init(title: "Cancle", style: .cancel, handler: { (action) in
+                            self.mapView.removeAnnotation(pointAnnotation)
+                        })
+                        let confirmAction = UIAlertAction.init(title: "Confirm", style: .default, handler: { (action) in
+                            self.mapView.addAnnotation(pointAnnotation)
+                            DataHub.sharedInstance.addAnnotation(annotation: annotation)
+                        })
+                        let message = "Would you like to bookmark this location?"
+                        let title = annotation.title! + ", " + annotation.subtitle!
+                        Utils.showAlert(title: title, message: message, actions: [cancleAction, confirmAction])
+                    } else {
+                        self.hideActivityIndicator(superView: self.view)
+                        Utils.showAlert(title: "Oops!!", message: "Unable to identify location. Please place pin at correct or different location.", actions: nil)
+                    }
                 }
             })
         }

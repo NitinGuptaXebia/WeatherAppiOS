@@ -10,15 +10,21 @@ import UIKit
 
 class HelpViewController: MasterViewController {
 
+    @IBOutlet weak var webVieW: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Help"
+        showActivityIndicator(superView: self.view)
+        let htmlFile = Bundle.main.path(forResource: "Help", ofType: "html")
+        let html = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
+        webVieW.loadHTMLString(html!, baseURL: nil)
+        webVieW.delegate = self
 
-        // Do any additional setup after loading the view.
-    }
+    }    
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension HelpViewController : UIWebViewDelegate {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        hideActivityIndicator(superView: self.view)
     }
-    
 }
