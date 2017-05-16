@@ -78,4 +78,8 @@ class Utils {
         }
         vc?.present(alert, animated: true, completion: nil)
     }
+    
+    internal static func documentDirectoryPath() -> String {
+        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+    }
 }

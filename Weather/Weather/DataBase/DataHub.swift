@@ -27,14 +27,42 @@ class DataHub {
         annotationsArray?.remove(at: index)
     }
 
+    func saveData() -> Void {
+        guard annotationsArray != nil && (annotationsArray?.count)! > 0 else {
+            return
+        }
+        
+        let finalArray = NSMutableArray()
+        for annotation in annotationsArray! {
+            let dict = annotation.encodeToDictionaryRepresentation()
+            finalArray.add(dict)
+        }
+        
+        let path = dataFilePath()
+        let status = finalArray.write(toFile: path, atomically: true)
+        print("status : \(status)")
+    }
+    
     //Mark: Private Functions
     private init() {
         initialisingDataHub()
     }
     
     private func initialisingDataHub() {
+        print("initialisingDataHub")
         annotationsArray = Array()
+        let path = dataFilePath()
+        if let savedArray = NSArray(contentsOfFile: path) {
+            for dict in savedArray {
+                let annotation = Annotation(withDictionary: dict as! NSDictionary)
+                addAnnotation(annotation: annotation)
+            }
+        }
     }
     
+    
+    private func dataFilePath() -> String {
+        return Utils.documentDirectoryPath() + "/data.plist"
+    }
     
 }

@@ -45,9 +45,11 @@ class MapViewController: MasterViewController {
                     Utils.showAlert(title: "ERROR", message: (error?.localizedDescription)!, actions: nil)
                 } else {
                     let placemark = placemarks?.first
+                    
                     let annotation = Annotation(withCoordinate: coordinate)
                     annotation.title = placemark?.administrativeArea
                     annotation.subtitle = placemark?.country
+                    
                     self.hideActivityIndicator(superView: self.view)
                     
                     let cancleAction = UIAlertAction.init(title: "Cancle", style: .cancel, handler: { (action) in

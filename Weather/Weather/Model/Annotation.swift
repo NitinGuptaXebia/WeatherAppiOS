@@ -11,10 +11,25 @@ import MapKit
 
 class Annotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
-    var title: String?
-    var subtitle: String?
+    var title: String? = ""
+    var subtitle: String? = ""
     
     init(withCoordinate coordinate: CLLocationCoordinate2D) {
         self.coordinate = coordinate
     }
+    
+    init(withDictionary dictionary: NSDictionary) {
+        let latitude = dictionary.object(forKey: "latitude") as! Double
+        let longitude = dictionary.object(forKey: "longitude") as! Double
+        self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        self.title = dictionary.object(forKey: "title") as? String
+        self.subtitle = dictionary.object(forKey: "subtitle") as? String
+    }
+    
+    func encodeToDictionaryRepresentation() -> NSDictionary {
+        let annotationDict = ["latitude":coordinate.latitude,"longitude": coordinate.longitude,"title":title!, "subtitle" : subtitle!] as [String : Any]
+        let nsDict = NSDictionary.init(dictionary: annotationDict)
+        return nsDict
+    }
+    
 }
