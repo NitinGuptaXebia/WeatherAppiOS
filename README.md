@@ -42,7 +42,7 @@ The project can be run using Xcode 8.3 and built/tested using the standard Xcode
 
 ● The UI is responsive supports - landscape and portrait orientations, and tablet resolutions.
 
-● Compatible with iOS 8+ or above.
+● Compatible with iOS 9.0+ or above.
 
 ● Unit tests added with coverage of 95% - Model, APIClients, Utils & Other functional part. Overall Covegare - 61% due to ViewController .
 
