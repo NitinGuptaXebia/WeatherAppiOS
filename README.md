@@ -52,6 +52,7 @@ The following are some of the improvements to the project that should be made gi
 - Use reachability to handle various network conditions
 - Better management of API requests and data fetching
 # Disclaimer :
-The icons are taken from [icon8](https://icons8.com)
+The icons are taken from [icon8](https://icons8.com),
+
 The weather data is provided by [OpenWeatherMap](http://openweathermap.org/), under the [Creative Commons license](http://creativecommons.org/licenses/by-sa/2.0/).
 
