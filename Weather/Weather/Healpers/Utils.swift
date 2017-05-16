@@ -73,4 +73,24 @@ class Utils {
         }
         return nil
     }
+    
+    /// Showing Alert With list of action, In case Actions are nil, It will insert default Cancle button
+    ///
+    /// - Parameters:
+    ///   - title: Alert Title
+    ///   - message: Alert Message
+    ///   - actions: List of UIAlertAction
+    internal class func showAlert(title: String, message: String, actions:[UIAlertAction]?) {
+        let vc = (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if let actionArray = actions {
+            for action in actionArray {
+                alert.addAction(action)
+            }
+        } else {
+            let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alert.addAction(okAction)
+        }
+        vc?.present(alert, animated: true, completion: nil)
+    }
 }
