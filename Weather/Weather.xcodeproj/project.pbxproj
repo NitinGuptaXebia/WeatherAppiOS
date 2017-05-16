@@ -26,6 +26,8 @@
 		F6D51B271ECB0F1A006BF869 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D51B261ECB0F1A006BF869 /* APIClient.swift */; };
 		F6D51B2A1ECB1039006BF869 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D51B291ECB1039006BF869 /* WeatherAPI.swift */; };
 		F6D51B2C1ECB1B82006BF869 /* ForecastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D51B2B1ECB1B82006BF869 /* ForecastAPI.swift */; };
+		F6D51B2E1ECB4196006BF869 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D51B2D1ECB4196006BF869 /* WeatherModel.swift */; };
+		F6D51B301ECB41A8006BF869 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D51B2F1ECB41A8006BF869 /* ForecastModel.swift */; };
 		F6F951721ECAD80700BD7B95 /* DataHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F951711ECAD80700BD7B95 /* DataHub.swift */; };
 		F6F951741ECAE31F00BD7B95 /* TemperaturePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F951731ECAE31F00BD7B95 /* TemperaturePickerCell.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		F6D51B261ECB0F1A006BF869 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F6D51B291ECB1039006BF869 /* WeatherAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 		F6D51B2B1ECB1B82006BF869 /* ForecastAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastAPI.swift; sourceTree = "<group>"; };
+		F6D51B2D1ECB4196006BF869 /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		F6D51B2F1ECB41A8006BF869 /* ForecastModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		F6F951711ECAD80700BD7B95 /* DataHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHub.swift; sourceTree = "<group>"; };
 		F6F951731ECAE31F00BD7B95 /* TemperaturePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturePickerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				F6CED0671ECAB18D00B8E0D6 /* Annotation.swift */,
+				F6D51B2D1ECB4196006BF869 /* WeatherModel.swift */,
+				F6D51B2F1ECB41A8006BF869 /* ForecastModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 				F6D51B271ECB0F1A006BF869 /* APIClient.swift in Sources */,
 				F6CED0581ECAAE6300B8E0D6 /* HomeViewController.swift in Sources */,
 				F6CED0661ECAAFF800B8E0D6 /* Utils.swift in Sources */,
+				F6D51B301ECB41A8006BF869 /* ForecastModel.swift in Sources */,
 				F6CED0191ECAA87C00B8E0D6 /* AppDelegate.swift in Sources */,
 				F6CED05C1ECAAF9700B8E0D6 /* MapViewController.swift in Sources */,
 				F6CED05E1ECAAFA700B8E0D6 /* HelpViewController.swift in Sources */,
@@ -331,6 +338,7 @@
 				F6F951741ECAE31F00BD7B95 /* TemperaturePickerCell.swift in Sources */,
 				F6D51B2A1ECB1039006BF869 /* WeatherAPI.swift in Sources */,
 				F6D51B2C1ECB1B82006BF869 /* ForecastAPI.swift in Sources */,
+				F6D51B2E1ECB4196006BF869 /* WeatherModel.swift in Sources */,
 				F6D51B251ECB0854006BF869 /* LoginViewController.swift in Sources */,
 				F6CED0641ECAAFDE00B8E0D6 /* Constants.swift in Sources */,
 			);
