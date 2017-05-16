@@ -1,16 +1,16 @@
 # WeatherAppiOS
 Weather, everybody wants to know how it is going to be during the week. Will it be rainy, windy, or sunny?
 
-# Requirements
+## Requirements
 
 * [Xcode 8.3](https://developer.apple.com/xcode/)
 * [Swift 3.1](https://github.com/apple/swift).
 
-# How to build
+## How to build
 
-Clone the project in your machine using ``https://github.com/NitinGuptaXebia/WeatherAppiOS``
+Clone the project in your machine using ``git id please``
 
-Go to the project directory **Project Directory -> Weather**
+Go to the project directory **Project Directory**
 
 The project can be run using Xcode 8.3 and built/tested using the standard Xcode build (⌘B) and test (⌘U) commands.
 
@@ -51,3 +51,5 @@ The following are some of the improvements to the project that should be made gi
 - UI tests
 - Use reachability to handle various network conditions
 - Better management of API requests and data fetching
+# Disclaimer :
+The icons are taken from [icon8](https://icons8.com)

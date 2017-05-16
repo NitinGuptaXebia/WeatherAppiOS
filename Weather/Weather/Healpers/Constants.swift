@@ -9,11 +9,48 @@
 import Foundation
 import UIKit
 
+struct UserDefaultKeys {
+    static let TemperaturUnitKey = "TemperaturUnitKey"
+}
+
 //Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit
 enum TempratureUnitType : Int {
     case Kelvin = 0
     case Celsius = 1
     case Fahrenheit = 2
+    internal static func getTempratureUnitKey(forType type: TempratureUnitType) -> String {
+        switch type {
+        case .Celsius:
+            return "Metric"
+        case .Fahrenheit:
+            return "Imperial"
+        case .Kelvin:
+            return "Default"
+        }
+    }
+    
+    internal static func getTemperatureTypeString(forType type: TempratureUnitType) -> String {
+        switch type {
+        case .Celsius:
+            return "Celsius"
+        case .Fahrenheit:
+            return "Fahrenheit"
+        case .Kelvin:
+            return "Kelvin"
+        }
+    }
+    
+    internal static func getTemperatureUnit(forType type: TempratureUnitType) -> String {
+        switch type {
+        case .Celsius:
+            return "°C"
+        case .Fahrenheit:
+            return "°F"
+        case .Kelvin:
+            return "K"
+        }
+    }
+    
 }
 
 struct AppColor {

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,7 +68,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="NLl-aM-gu4">
-                        <barButtonItem key="leftBarButtonItem" image="Settings" id="MrV-4R-OsI"/>
+                        <barButtonItem key="leftBarButtonItem" image="Settings" id="MrV-4R-OsI">
+                            <connections>
+                                <segue destination="gb0-U6-Tap" kind="presentation" id="EcY-I7-s2g"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="QDW-5U-HiM">
                                 <connections>
@@ -168,9 +173,122 @@
             </objects>
             <point key="canvasLocation" x="-74.400000000000006" y="-545.57721139430294"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="L97-6a-Gnc">
+            <objects>
+                <viewController id="wP6-12-jsS" customClass="SettingsViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HPx-2a-4X6"/>
+                        <viewControllerLayoutGuide type="bottom" id="4xn-5e-TFb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gI7-8x-TXM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mkt-kD-aRu">
+                                <rect key="frame" x="5" y="30" width="370" height="637"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bCE-gD-ZsU">
+                                    <size key="itemSize" width="150" height="75"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="50" minY="10" maxX="50" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TemperaturePickerCell" id="d4z-TX-sTB" customClass="TemperaturePickerCell" customModule="Weather" customModuleProvider="target">
+                                        <rect key="frame" x="110" y="10" width="150" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW5-gS-uLZ">
+                                                    <rect key="frame" x="8" y="8" width="134" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebV-mL-pNh">
+                                                    <rect key="frame" x="8" y="37" width="134" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ok" translatesAutoresizingMaskIntoConstraints="NO" id="REo-yP-ede">
+                                                    <rect key="frame" x="129" y="54" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="Chw-GT-yUt"/>
+                                                        <constraint firstAttribute="height" constant="20" id="cUy-Ts-1U7"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="REo-yP-ede" secondAttribute="trailing" constant="1" id="3Uk-rd-9yQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="REo-yP-ede" secondAttribute="bottom" constant="1" id="7wQ-bT-aqk"/>
+                                            <constraint firstItem="cW5-gS-uLZ" firstAttribute="trailing" secondItem="d4z-TX-sTB" secondAttribute="trailingMargin" id="9e6-yP-z39"/>
+                                            <constraint firstItem="REo-yP-ede" firstAttribute="top" secondItem="cW5-gS-uLZ" secondAttribute="bottom" constant="23" id="NT2-HX-7jl"/>
+                                            <constraint firstItem="ebV-mL-pNh" firstAttribute="trailing" secondItem="d4z-TX-sTB" secondAttribute="trailingMargin" id="X2j-ve-QSL"/>
+                                            <constraint firstItem="cW5-gS-uLZ" firstAttribute="leading" secondItem="d4z-TX-sTB" secondAttribute="leadingMargin" id="cnc-6e-Oln"/>
+                                            <constraint firstItem="ebV-mL-pNh" firstAttribute="leading" secondItem="d4z-TX-sTB" secondAttribute="leadingMargin" id="mHM-7z-BW6"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ebV-mL-pNh" secondAttribute="bottom" constant="9" id="pMU-3w-aNl"/>
+                                            <constraint firstItem="cW5-gS-uLZ" firstAttribute="top" secondItem="d4z-TX-sTB" secondAttribute="topMargin" id="zDh-r4-fI6"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="selectedImage" destination="REo-yP-ede" id="chM-K7-Gtc"/>
+                                            <outlet property="temperatureTypeLabel" destination="ebV-mL-pNh" id="fcq-Iv-mXD"/>
+                                            <outlet property="temperatureUnitLabel" destination="cW5-gS-uLZ" id="BAc-1y-OE4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wP6-12-jsS" id="TMQ-lx-lQX"/>
+                                    <outlet property="delegate" destination="wP6-12-jsS" id="KIg-Ex-WIo"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mkt-kD-aRu" secondAttribute="trailing" id="Ixq-kf-2wR"/>
+                            <constraint firstItem="mkt-kD-aRu" firstAttribute="leading" secondItem="gI7-8x-TXM" secondAttribute="leading" constant="5" id="KWd-8D-eUw"/>
+                            <constraint firstItem="mkt-kD-aRu" firstAttribute="top" secondItem="gI7-8x-TXM" secondAttribute="top" constant="30" id="USx-Xy-ckc"/>
+                            <constraint firstItem="4xn-5e-TFb" firstAttribute="top" secondItem="mkt-kD-aRu" secondAttribute="bottom" id="goc-op-YhM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bSH-9M-rei">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fE1-lD-Wqi">
+                            <connections>
+                                <action selector="cancleAction:" destination="wP6-12-jsS" id="nRJ-GY-yR7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30d-ix-sVp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8" y="-1237.3313343328336"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v2d-cq-NnN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gb0-U6-Tap" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fs1-nr-ew2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wP6-12-jsS" kind="relationship" relationship="rootViewController" id="Phn-tC-UE7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ded-VT-UL7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.60000000000002" y="-1237.3313343328336"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Edit" width="25" height="25"/>
+        <image name="Ok" width="30" height="30"/>
         <image name="Settings" width="25" height="25"/>
     </resources>
 </document>

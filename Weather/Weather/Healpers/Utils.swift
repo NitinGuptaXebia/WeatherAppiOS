@@ -23,21 +23,6 @@ class Utils {
         }
     }
     
-    /// Getting String for Tempratature Type
-    ///
-    /// - Parameter type: Tempratature Unit Type
-    /// - Returns: String for Tempratature Type
-    internal class func getTempratureUnitKey(forType type: TempratureUnitType) -> String {
-        switch type {
-        case .Celsius:
-            return "Metric"
-        case .Fahrenheit:
-            return "Imperial"
-        case .Kelvin:
-            return "Default"
-        }
-    }
-    
     /// Setting Up Navigation Controller Attributes
     ///
     /// - Parameter navigationController: navigationController instance
