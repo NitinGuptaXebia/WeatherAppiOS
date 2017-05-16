@@ -21,6 +21,7 @@
 		F6CED0641ECAAFDE00B8E0D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0631ECAAFDE00B8E0D6 /* Constants.swift */; };
 		F6CED0661ECAAFF800B8E0D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0651ECAAFF800B8E0D6 /* Utils.swift */; };
 		F6CED0681ECAB18D00B8E0D6 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0671ECAB18D00B8E0D6 /* Annotation.swift */; };
+		F6D51B231ECB0521006BF869 /* Help.html in Resources */ = {isa = PBXBuildFile; fileRef = F6D51B221ECB0521006BF869 /* Help.html */; };
 		F6F951721ECAD80700BD7B95 /* DataHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F951711ECAD80700BD7B95 /* DataHub.swift */; };
 		F6F951741ECAE31F00BD7B95 /* TemperaturePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F951731ECAE31F00BD7B95 /* TemperaturePickerCell.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		F6CED0631ECAAFDE00B8E0D6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F6CED0651ECAAFF800B8E0D6 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F6CED0671ECAB18D00B8E0D6 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		F6D51B221ECB0521006BF869 /* Help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Help.html; sourceTree = "<group>"; };
 		F6F951711ECAD80700BD7B95 /* DataHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHub.swift; sourceTree = "<group>"; };
 		F6F951731ECAE31F00BD7B95 /* TemperaturePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturePickerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 				F6CED04B1ECAADFA00B8E0D6 /* DataBase */,
 				F6CED04C1ECAADFA00B8E0D6 /* Healpers */,
 				F6CED01F1ECAA87C00B8E0D6 /* Assets.xcassets */,
+				F6D51B221ECB0521006BF869 /* Help.html */,
 				F6CED0241ECAA87C00B8E0D6 /* Info.plist */,
 			);
 			path = Weather;
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6CED0561ECAAE1F00B8E0D6 /* Main.storyboard in Resources */,
+				F6D51B231ECB0521006BF869 /* Help.html in Resources */,
 				F6CED0201ECAA87C00B8E0D6 /* Assets.xcassets in Resources */,
 				F6CED0551ECAAE1F00B8E0D6 /* LaunchScreen.storyboard in Resources */,
 			);

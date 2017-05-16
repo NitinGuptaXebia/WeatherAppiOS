@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -72,11 +73,18 @@
                                 <segue destination="gb0-U6-Tap" kind="presentation" id="EcY-I7-s2g"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QDW-5U-HiM">
-                            <connections>
-                                <segue destination="gsS-Vg-2j1" kind="show" id="p20-NR-ms2"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="Help" id="IFD-LE-JU5">
+                                <connections>
+                                    <segue destination="BAF-aJ-tn3" kind="show" id="7gA-Qu-GwI"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="QDW-5U-HiM">
+                                <connections>
+                                    <segue destination="gsS-Vg-2j1" kind="show" id="p20-NR-ms2"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="citiesTableView" destination="u2B-bb-QLN" id="IPN-kA-2ob"/>
@@ -113,6 +121,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0d1-nf-3fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="822" y="166"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="VyO-fq-hvI">
+            <objects>
+                <viewController id="BAF-aJ-tn3" customClass="HelpViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gdN-OO-hcj"/>
+                        <viewControllerLayoutGuide type="bottom" id="id8-dZ-gKl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ni-sF-XFr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRe-Ay-yt8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eRe-Ay-yt8" firstAttribute="leading" secondItem="8Ni-sF-XFr" secondAttribute="leading" id="9Ub-zH-43T"/>
+                            <constraint firstItem="eRe-Ay-yt8" firstAttribute="top" secondItem="8Ni-sF-XFr" secondAttribute="top" id="LqW-x4-BpW"/>
+                            <constraint firstItem="id8-dZ-gKl" firstAttribute="top" secondItem="eRe-Ay-yt8" secondAttribute="bottom" id="hO1-38-fzO"/>
+                            <constraint firstAttribute="trailing" secondItem="eRe-Ay-yt8" secondAttribute="trailing" id="rhx-lE-D2y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webVieW" destination="eRe-Ay-yt8" id="JIf-Xn-e4Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cef-XA-ixT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1681" y="166"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="we7-5k-ZPW">
@@ -283,6 +324,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Help" width="25" height="25"/>
         <image name="Ok" width="30" height="30"/>
         <image name="Settings" width="25" height="25"/>
     </resources>

@@ -11,7 +11,8 @@ import Foundation
 class DataHub {
     
     var annotationsArray : Array<Annotation>?
-    
+    var isLoggedIn = false
+
     internal class var sharedInstance: DataHub {
         struct Singleton {
             static let instance = DataHub()
