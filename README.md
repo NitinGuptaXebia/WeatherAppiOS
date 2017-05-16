@@ -1,6 +1,6 @@
 # WeatherAppiOS
 Weather, everybody wants to know how it is going to be during the week. Will it be rainy, windy, or sunny?
-
+Stay connected to the latest in weather forecasting with  Weather. This free, weather app now and features , available for more countries and for more minutes than any other minute-by-minute precipitation forecast. Supporting Apple iPhone, this app offers the same world-class, synchronized app experience across all your iOS devices.
 ## Requirements
 
 * [Xcode 8.3](https://developer.apple.com/xcode/)
@@ -22,7 +22,7 @@ The project can be run using Xcode 8.3 and built/tested using the standard Xcode
 * MVC - Reactively update `ViewController` UI from `ViewModel`
 * `Protocol-Oriented Programming `
 * `Core Location`
-
+* `UIStackView`
 #
 ● Home screen:
 - Showing a list of locations that the user has bookmarked previously.
@@ -53,3 +53,5 @@ The following are some of the improvements to the project that should be made gi
 - Better management of API requests and data fetching
 # Disclaimer :
 The icons are taken from [icon8](https://icons8.com)
+The weather data is provided by [OpenWeatherMap](http://openweathermap.org/), under the [Creative Commons license](http://creativecommons.org/licenses/by-sa/2.0/).
+
