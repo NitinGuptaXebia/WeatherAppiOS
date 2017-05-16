@@ -408,6 +408,7 @@
 				F6CED0341ECAA87C00B8E0D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6CED0351ECAA87C00B8E0D6 /* Build configuration list for PBXNativeTarget "WeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +417,7 @@
 				F6CED0371ECAA87C00B8E0D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
