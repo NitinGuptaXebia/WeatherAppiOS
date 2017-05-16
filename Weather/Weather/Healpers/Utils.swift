@@ -41,13 +41,16 @@ class Utils {
     /// Setting Up Navigation Controller Attributes
     ///
     /// - Parameter navigationController: navigationController instance
-    internal class func customizeNavigation(navigationController: UINavigationController) {
-        navigationController.navigationBar.barTintColor = AppColor.PrimaryColor
-        navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 16.0)]
-        navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.tintColor = UIColor.white
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController.navigationBar.shadowImage = UIImage()
+    internal class func customizeNavigation(navigationController: UINavigationController?) {
+        guard navigationController != nil else {
+            return
+        }
+        navigationController!.navigationBar.barTintColor = AppColor.PrimaryColor
+        navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 16.0)]
+        navigationController!.navigationBar.isTranslucent = false
+        navigationController!.navigationBar.tintColor = UIColor.white
+        navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController!.navigationBar.shadowImage = UIImage()
     }
     
     /// Setting Up Custom Application Statusbar

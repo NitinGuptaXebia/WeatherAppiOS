@@ -24,7 +24,11 @@ class MasterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
     /*
      Show customized activity indicator,
      actually add activity indicator to passing view
