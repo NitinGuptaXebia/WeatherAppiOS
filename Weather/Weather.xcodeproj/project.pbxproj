@@ -12,7 +12,15 @@
 		F6CED02E1ECAA87C00B8E0D6 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED02D1ECAA87C00B8E0D6 /* WeatherTests.swift */; };
 		F6CED0551ECAAE1F00B8E0D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6CED0511ECAAE1F00B8E0D6 /* LaunchScreen.storyboard */; };
 		F6CED0561ECAAE1F00B8E0D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6CED0531ECAAE1F00B8E0D6 /* Main.storyboard */; };
-		F6CED0581ECAAE6300B8E0D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0571ECAAE6300B8E0D6 /* ViewController.swift */; };
+		F6CED0581ECAAE6300B8E0D6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0571ECAAE6300B8E0D6 /* HomeViewController.swift */; };
+		F6CED05A1ECAAF8800B8E0D6 /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0591ECAAF8800B8E0D6 /* WeatherDetailViewController.swift */; };
+		F6CED05C1ECAAF9700B8E0D6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED05B1ECAAF9700B8E0D6 /* MapViewController.swift */; };
+		F6CED05E1ECAAFA700B8E0D6 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED05D1ECAAFA700B8E0D6 /* HelpViewController.swift */; };
+		F6CED0601ECAAFB600B8E0D6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED05F1ECAAFB600B8E0D6 /* SettingsViewController.swift */; };
+		F6CED0621ECAAFD000B8E0D6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0611ECAAFD000B8E0D6 /* MasterViewController.swift */; };
+		F6CED0641ECAAFDE00B8E0D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0631ECAAFDE00B8E0D6 /* Constants.swift */; };
+		F6CED0661ECAAFF800B8E0D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0651ECAAFF800B8E0D6 /* Utils.swift */; };
+		F6CED0681ECAB18D00B8E0D6 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CED0671ECAB18D00B8E0D6 /* Annotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +43,15 @@
 		F6CED02F1ECAA87C00B8E0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6CED0521ECAAE1F00B8E0D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6CED0541ECAAE1F00B8E0D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		F6CED0571ECAAE6300B8E0D6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6CED0571ECAAE6300B8E0D6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F6CED0591ECAAF8800B8E0D6 /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
+		F6CED05B1ECAAF9700B8E0D6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F6CED05D1ECAAFA700B8E0D6 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		F6CED05F1ECAAFB600B8E0D6 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F6CED0611ECAAFD000B8E0D6 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		F6CED0631ECAAFDE00B8E0D6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F6CED0651ECAAFF800B8E0D6 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F6CED0671ECAB18D00B8E0D6 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +141,9 @@
 		F6CED04C1ECAADFA00B8E0D6 /* Healpers */ = {
 			isa = PBXGroup;
 			children = (
+				F6CED0611ECAAFD000B8E0D6 /* MasterViewController.swift */,
+				F6CED0631ECAAFDE00B8E0D6 /* Constants.swift */,
+				F6CED0651ECAAFF800B8E0D6 /* Utils.swift */,
 			);
 			path = Healpers;
 			sourceTree = "<group>";
@@ -132,7 +151,11 @@
 		F6CED04D1ECAADFA00B8E0D6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F6CED0571ECAAE6300B8E0D6 /* ViewController.swift */,
+				F6CED0571ECAAE6300B8E0D6 /* HomeViewController.swift */,
+				F6CED0591ECAAF8800B8E0D6 /* WeatherDetailViewController.swift */,
+				F6CED05B1ECAAF9700B8E0D6 /* MapViewController.swift */,
+				F6CED05D1ECAAFA700B8E0D6 /* HelpViewController.swift */,
+				F6CED05F1ECAAFB600B8E0D6 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +170,7 @@
 		F6CED04F1ECAADFA00B8E0D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6CED0671ECAB18D00B8E0D6 /* Annotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,8 +287,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6CED0581ECAAE6300B8E0D6 /* ViewController.swift in Sources */,
+				F6CED05A1ECAAF8800B8E0D6 /* WeatherDetailViewController.swift in Sources */,
+				F6CED0581ECAAE6300B8E0D6 /* HomeViewController.swift in Sources */,
+				F6CED0661ECAAFF800B8E0D6 /* Utils.swift in Sources */,
 				F6CED0191ECAA87C00B8E0D6 /* AppDelegate.swift in Sources */,
+				F6CED05C1ECAAF9700B8E0D6 /* MapViewController.swift in Sources */,
+				F6CED05E1ECAAFA700B8E0D6 /* HelpViewController.swift in Sources */,
+				F6CED0681ECAB18D00B8E0D6 /* Annotation.swift in Sources */,
+				F6CED0621ECAAFD000B8E0D6 /* MasterViewController.swift in Sources */,
+				F6CED0601ECAAFB600B8E0D6 /* SettingsViewController.swift in Sources */,
+				F6CED0641ECAAFDE00B8E0D6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
