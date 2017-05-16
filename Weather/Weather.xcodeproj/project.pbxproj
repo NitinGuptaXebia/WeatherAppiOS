@@ -35,6 +35,7 @@
 		F6D51B401ECB4D9E006BF869 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D51B371ECB4D9E006BF869 /* 6.png */; };
 		F6D51B411ECB4D9E006BF869 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D51B381ECB4D9E006BF869 /* 7.png */; };
 		F6D51B431ECB4D9E006BF869 /* Help.html in Resources */ = {isa = PBXBuildFile; fileRef = F6D51B3A1ECB4D9E006BF869 /* Help.html */; };
+		F6D51B451ECB5041006BF869 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D51B441ECB5041006BF869 /* 8.png */; };
 		F6F951721ECAD80700BD7B95 /* DataHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F951711ECAD80700BD7B95 /* DataHub.swift */; };
 		F6F951741ECAE31F00BD7B95 /* TemperaturePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F951731ECAE31F00BD7B95 /* TemperaturePickerCell.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		F6D51B371ECB4D9E006BF869 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 		F6D51B381ECB4D9E006BF869 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		F6D51B3A1ECB4D9E006BF869 /* Help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Help.html; sourceTree = "<group>"; };
+		F6D51B441ECB5041006BF869 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		F6F951711ECAD80700BD7B95 /* DataHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHub.swift; sourceTree = "<group>"; };
 		F6F951731ECAE31F00BD7B95 /* TemperaturePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturePickerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -243,6 +245,7 @@
 				F6D51B361ECB4D9E006BF869 /* 5.png */,
 				F6D51B371ECB4D9E006BF869 /* 6.png */,
 				F6D51B381ECB4D9E006BF869 /* 7.png */,
+				F6D51B441ECB5041006BF869 /* 8.png */,
 				F6D51B3A1ECB4D9E006BF869 /* Help.html */,
 			);
 			path = HelpResourse;
@@ -331,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D51B451ECB5041006BF869 /* 8.png in Resources */,
 				F6CED0561ECAAE1F00B8E0D6 /* Main.storyboard in Resources */,
 				F6D51B3E1ECB4D9E006BF869 /* 4.png in Resources */,
 				F6D51B3B1ECB4D9E006BF869 /* 1.png in Resources */,
