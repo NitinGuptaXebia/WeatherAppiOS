@@ -65,7 +65,7 @@ struct APIConfigurations {
 }
 
 struct LoginConfiguration {
-    static let isLoginEanbled = false
+    static let isLoginEanbled = true
     static let UserName = "nitin@backbase.com"
     static let Password = "xebia@123"
 }
