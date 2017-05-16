@@ -22,10 +22,6 @@ class HomeViewController: MasterViewController {
         setupTableView()
         manageLoginView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

@@ -20,13 +20,7 @@ class HelpViewController: MasterViewController {
         webVieW.loadHTMLString(html!, baseURL: nil)
         webVieW.delegate = self
 
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    }    
 }
 
 extension HelpViewController : UIWebViewDelegate {

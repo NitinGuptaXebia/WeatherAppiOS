@@ -28,11 +28,6 @@ class LoginViewController: MasterViewController {
         _unregisterForKeyboardNotification()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     fileprivate func updateButtonState() {
         guard let  username = userNameTF.text, let password = passwordTF.text else { loginButton.isEnabled = false
             return

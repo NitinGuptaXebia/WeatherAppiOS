@@ -14,7 +14,7 @@
         <!--Weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -125,7 +125,7 @@
         <!--Help View Controller-->
         <scene sceneID="VyO-fq-hvI">
             <objects>
-                <viewController id="BAF-aJ-tn3" customClass="HelpViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpViewController" id="BAF-aJ-tn3" customClass="HelpViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gdN-OO-hcj"/>
                         <viewControllerLayoutGuide type="bottom" id="id8-dZ-gKl"/>
@@ -158,7 +158,7 @@
         <!--Map View Controller-->
         <scene sceneID="we7-5k-ZPW">
             <objects>
-                <viewController id="gsS-Vg-2j1" customClass="MapViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="gsS-Vg-2j1" customClass="MapViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="geM-HE-VbL"/>
                         <viewControllerLayoutGuide type="bottom" id="1aI-ym-Zvz"/>
@@ -213,7 +213,7 @@
         <!--Settings View Controller-->
         <scene sceneID="L97-6a-Gnc">
             <objects>
-                <viewController id="wP6-12-jsS" customClass="SettingsViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="wP6-12-jsS" customClass="SettingsViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HPx-2a-4X6"/>
                         <viewControllerLayoutGuide type="bottom" id="4xn-5e-TFb"/>

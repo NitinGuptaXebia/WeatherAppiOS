@@ -21,10 +21,6 @@ class MapViewController: MasterViewController {
         self.title = "Pin Your Location"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     //MARK: Private Functions
     private func setLongPressGesture() -> Void {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationOnLongPress(gesture:)))

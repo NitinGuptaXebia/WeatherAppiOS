@@ -11,7 +11,7 @@ import Foundation
 class DataHub {
     
     var annotationsArray : Array<Annotation>?
-    var isLoggedIn = true
+    var isLoggedIn = false
 
     internal class var sharedInstance: DataHub {
         struct Singleton {
@@ -26,6 +26,9 @@ class DataHub {
     }
     
     func removeAnnotation(index: Int) -> Void {
+        guard index < (annotationsArray?.count)! else {
+            return
+        }
         annotationsArray?.remove(at: index)
         saveData()
     }

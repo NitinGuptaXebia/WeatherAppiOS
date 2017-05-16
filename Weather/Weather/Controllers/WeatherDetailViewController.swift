@@ -17,14 +17,12 @@ class WeatherDetailViewController: MasterViewController {
         getWeatherData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     func getWeatherData() -> Void {
         var unit = UserDefaults.standard.object(forKey: UserDefaultKeys.TemperaturUnitKey)
         unit = unit == nil ? "Metric" : unit
+        guard annotation != nil else {
+            return
+        }
         fetchWeather(forLatitude: (annotation?.coordinate.latitude)!, Longitude: (annotation?.coordinate.longitude)!, TempratureUnit: unit as! String)
     }
     

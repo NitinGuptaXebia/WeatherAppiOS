@@ -8,9 +8,9 @@ Stay connected to the latest in weather forecasting with  Weather. This free, we
 
 ## How to build
 
-Clone the project in your machine using ``git id please``
+Clone the project in your machine using ``https://github.com/NitinGuptaXebia/WeatherAppiOS``
 
-Go to the project directory **Project Directory**
+Go to the project directory **Project Directory -> Weather**
 
 The project can be run using Xcode 8.3 and built/tested using the standard Xcode build (⌘B) and test (⌘U) commands.
 
@@ -23,6 +23,7 @@ The project can be run using Xcode 8.3 and built/tested using the standard Xcode
 * `Protocol-Oriented Programming `
 * `Apple Map Kit`
 * `UIStackView`
+* `Core Location`
 #
 ● Home screen:
 - Showing a list of locations that the user has bookmarked previously.
@@ -43,7 +44,7 @@ The project can be run using Xcode 8.3 and built/tested using the standard Xcode
 
 ● Compatible with iOS 8+ or above.
 
-● Unit tests added with coverage of 80%.
+● Unit tests added with coverage of 95% - Model, APIClients, Utils & Other functional part. Overall Covegare - 61% due to ViewController .
 
 ## Further Improvements
 
